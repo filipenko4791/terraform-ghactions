@@ -48,10 +48,10 @@ jobs:
       # uses: hashicorp/setup-terraform@d22444889af304a44b997011fbabb81ff705a7b4
         uses: hashicorp/setup-terraform@v1.2.1
         
-      - name: Terraform init
-        run: terraform init -backend-config="storage_account_name=${{ env.AZURE_STORAGE }}
+      - name: Terraform Init
+        run: terraform init -backend-config="storage_account_name=${{ env.AZURE_STORAGE }}"
         
-      - name: Terraform plan
+      - name: Terraform Plan
         run: terraform plan -out=tfplan
         
       - name: Terraform Apply
